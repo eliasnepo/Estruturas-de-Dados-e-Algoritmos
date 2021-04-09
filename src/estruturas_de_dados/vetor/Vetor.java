@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class Vetor {
 	
-    private String[] vetor;
-    private int capacidade;
-    private int tamanhoAtual;
+    public String[] vetor;
+    public int capacidade;
+    public int tamanhoAtual;
 
     public Vetor() {
         vetor = new String[1];
@@ -70,10 +70,6 @@ public class Vetor {
         return vetorTemporario;
     }
 
-    public int length() {
-        return tamanhoAtual;
-    }
-
     // TESTAR O VETOR
     public static void main(String[] args) {
         Vetor vetorDinamico = new Vetor();
@@ -84,7 +80,7 @@ public class Vetor {
         vetorDinamico.push("!");
         
         System.out.println("Vetor inicial: " + Arrays.toString(vetorDinamico.getArray()));
-        System.out.println("Tamanho do vetor: " + vetorDinamico.length());
+        System.out.println("Tamanho do vetor: " + vetorDinamico.tamanhoAtual);
         System.out.println("Index 2: " + vetorDinamico.get(2));
         System.out.println("------------------------------------");
         vetorDinamico.replace(3, "Nepomuceno");
@@ -93,6 +89,6 @@ public class Vetor {
         System.out.println("Vetor: " + Arrays.toString(vetorDinamico.getArray()));
         vetorDinamico.delete(0);
         System.out.println("Vetor: " + Arrays.toString(vetorDinamico.getArray()));
-        System.out.println("Tamanho do vetor: " + vetorDinamico.length());
+        System.out.println("Tamanho do vetor: " + vetorDinamico.tamanhoAtual);
     }
 }

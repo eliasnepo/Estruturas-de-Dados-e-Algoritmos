@@ -2,9 +2,9 @@ package estruturas_de_dados.listas_ligadas;
 
 public class ListaLigada {
 
-	int tamanho;
-	No primeiro;
-	No ultimo;
+	public int tamanho;
+	public No primeiro;
+	public No ultimo;
 
 	public ListaLigada() {
 		primeiro = null;

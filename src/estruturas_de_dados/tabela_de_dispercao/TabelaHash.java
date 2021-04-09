@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TabelaHash {
-    ArrayList<ChaveValor>[] data;
-    int tamanhoAtual;
+    public ArrayList<ChaveValor>[] data;
+    public int tamanhoAtual;
 
     public TabelaHash(int tamanho) {
         data = new ArrayList[tamanho];
@@ -40,8 +40,8 @@ public class TabelaHash {
         ArrayList<ChaveValor> tamanhoOcupadoNoEndereco = data[enderecoDeMemoria];
         if (tamanhoOcupadoNoEndereco != null) {
             for (ChaveValor keyValue : tamanhoOcupadoNoEndereco) {
-                if (keyValue.getKey().equals(chave)) {
-                    return keyValue.getValue();
+                if (keyValue.chave.equals(chave)) {
+                    return keyValue.valor;
                 }
             }
         }
@@ -54,7 +54,7 @@ public class TabelaHash {
         int contador = 0;
         for (ArrayList<ChaveValor> chaveValor : tamanhoOcupado) {
             if (chaveValor != null) {
-            	vetorDeChaves[contador] = chaveValor.get(0).getKey();
+            	vetorDeChaves[contador] = chaveValor.get(0).chave;
             	contador++;
             }
         }

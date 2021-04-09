@@ -5,7 +5,7 @@ import java.util.Arrays;
 /* 
  * 
  * DADOS 2 VETORES ORDENADOS, CONCATENAR OS VETORES E MANTER A ORDEM.
- * EX: [0, 2, 4, 5] | [1, 6]
+ * ENTRADA: [0, 2, 4, 5] | [1, 6]
  * SAIDA: [0, 1, 2, 4, 5, 6]
  * 
  * */

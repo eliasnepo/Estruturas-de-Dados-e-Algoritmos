@@ -2,7 +2,7 @@ package exercicios.vetores;
 
 /*
  * DADO UMA STRING QUALQUER, INVERTER ESSA STRING
- * EX: Elias Nepomuceno
+ * ENTRADA: Elias Nepomuceno
  * SAÍDA: onecumopeN sailE
  */
 
