@@ -11,7 +11,8 @@ public class TabelaHash {
     public ArrayList<ChaveValor>[] data;
     public int tamanhoAtual;
 
-    public TabelaHash(int tamanho) {
+    @SuppressWarnings("unchecked")
+	public TabelaHash(int tamanho) {
         data = new ArrayList[tamanho];
         tamanhoAtual = 0;
     }
