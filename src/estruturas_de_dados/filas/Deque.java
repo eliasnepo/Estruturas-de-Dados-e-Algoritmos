@@ -66,6 +66,7 @@ public class Deque {
     	}
     	anterior.proximo = null;
     	this.ultimo = anterior;
+    	this.tamanho--;
     }
 
     public void exibeDeque() {
@@ -108,5 +109,6 @@ public class Deque {
         deque.removeOUltimoDaFila();
         deque.exibeDeque();
         deque.exibeDequeOrdemInversa();
+        System.out.println(deque.tamanho);
     }
 }
