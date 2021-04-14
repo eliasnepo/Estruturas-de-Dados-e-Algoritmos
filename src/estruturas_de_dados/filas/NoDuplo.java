@@ -5,6 +5,9 @@ public class NoDuplo {
     public NoDuplo proximo;
     public NoDuplo anterior;
 
+    public NoDuplo() {
+    }
+    
     public NoDuplo(String valor) {
         this.valor = valor;
         this.proximo = null;
