@@ -1,4 +1,4 @@
-package algoritmos.insertion_sort;
+package algoritmos.ordenacao;
 
 import java.util.ArrayList;
 import java.util.Arrays;
