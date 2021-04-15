@@ -1,4 +1,4 @@
-package exercicios.recursao;
+package algoritmos.recursao;
 import java.util.Scanner;
 
 /*
