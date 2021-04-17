@@ -141,7 +141,10 @@ public class ArvorePesquisaBinaria {
         System.out.println("BFS Normal: " + buscas.buscaLargura(arvore));
         ArrayList<No> fila = new ArrayList<>();
         fila.add(arvore.raiz);
-        System.out.println("DFS Recursiva: " + buscas.buscaLarguraRecursiva(fila, new ArrayList<>()));
+        System.out.println("BFS Recursiva: " + buscas.buscaLarguraRecursiva(fila, new ArrayList<>()));
+        System.out.println("DFS Em Ordem: " + buscas.buscaProfundidadeEmOrdem(arvore));
+        System.out.println("DFS Pre Ordem: " + buscas.buscaProfundidadePreOrdem(arvore));
+        System.out.println("DFS Pós Ordem: " + buscas.buscaProfundidadePosOrdem(arvore));
         System.out.println("---------------------");
         System.out.println("Procurar valor 20: " + arvore.procurarValor(20));
         arvore.removerValor(20);

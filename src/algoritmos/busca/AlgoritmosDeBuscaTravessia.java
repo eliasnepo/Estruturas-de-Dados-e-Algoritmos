@@ -46,4 +46,59 @@ public class AlgoritmosDeBuscaTravessia {
 
         return buscaLarguraRecursiva(fila, resultado);
     }
+	
+	//  			   9
+	//            4        20
+	//         1    6   15    170
+	//	Em ordem [1, 4, 6, 9, 15, 20, 170]
+	//	Pré ordem[9, 4, 1, 6, 20, 15, 170]
+	//	Pós ordem[1, 6, 4, 15, 170, 20, 9]
+	
+	public ArrayList<Integer> travessiaEmOrdem(No no, ArrayList<Integer> vetor) {
+        if (no.esquerda != null) {
+            travessiaEmOrdem(no.esquerda, vetor);
+        }
+        vetor.add(no.valor);
+        if (no.direita != null) {
+            travessiaEmOrdem(no.direita, vetor);
+        }
+        return vetor;
+    }
+
+    public ArrayList<Integer> travessiaPreOrdem(No no, ArrayList<Integer> vetor) {
+        vetor.add(no.valor);
+        if (no.esquerda != null) {
+            travessiaPreOrdem(no.esquerda, vetor);
+        }
+        if (no.direita != null) {
+            travessiaPreOrdem(no.direita, vetor);
+        }
+        return vetor;
+    }
+
+    public ArrayList<Integer> travessiaPosOrdem(No no, ArrayList<Integer> vetor) {
+        if (no.esquerda != null) {
+            travessiaPosOrdem(no.esquerda, vetor);
+        }
+        if (no.direita != null) {
+            travessiaPosOrdem(no.direita, vetor);
+        }
+        vetor.add(no.valor);
+        return vetor;
+    }
+    
+    public ArrayList<Integer> buscaProfundidadeEmOrdem(ArvorePesquisaBinaria arvore) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        return travessiaEmOrdem(arvore.raiz, resultado);
+    }
+
+    public ArrayList<Integer> buscaProfundidadePreOrdem(ArvorePesquisaBinaria arvore) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        return travessiaPreOrdem(arvore.raiz, resultado);
+    }
+
+    public ArrayList<Integer> buscaProfundidadePosOrdem(ArvorePesquisaBinaria arvore) {
+        ArrayList<Integer> resultado = new ArrayList<>();
+        return travessiaPosOrdem(arvore.raiz, resultado);
+    }
 }
