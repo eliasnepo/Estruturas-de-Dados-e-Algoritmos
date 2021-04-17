@@ -1,7 +1,11 @@
 package estruturas_de_dados.arvores;
 
+import java.util.ArrayList;
+
+import algoritmos.busca.AlgoritmosDeBuscaTravessia;
+
 public class ArvorePesquisaBinaria {
-    No raiz = null;
+    public No raiz = null;
 
     public void inserirValor(int valor) {
         No novoNo = new No(valor);
@@ -133,6 +137,12 @@ public class ArvorePesquisaBinaria {
         arvore.inserirValor(170);
         arvore.inserirValor(15);
         arvore.inserirValor(1);
+        AlgoritmosDeBuscaTravessia buscas = new AlgoritmosDeBuscaTravessia();
+        System.out.println("BFS Normal: " + buscas.buscaLargura(arvore));
+        ArrayList<No> fila = new ArrayList<>();
+        fila.add(arvore.raiz);
+        System.out.println("DFS Recursiva: " + buscas.buscaLarguraRecursiva(fila, new ArrayList<>()));
+        System.out.println("---------------------");
         System.out.println("Procurar valor 20: " + arvore.procurarValor(20));
         arvore.removerValor(20);
         System.out.println("Procurar valor 20 após removê-lo: " + arvore.procurarValor(20));
